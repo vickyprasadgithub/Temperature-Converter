@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Tri vikram</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter App</title>
+    <script>
+        function convertTemperature() {
+            var celsius = parseFloat(document.getElementById("celsius").value);
+            var fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+
+            if (!isNaN(celsius)) {
+                fahrenheit = (celsius * 9/5) + 32;
+                document.getElementById("fahrenheit").value = fahrenheit.toFixed(2);
+            }
+            else if (!isNaN(fahrenheit)) {
+                celsius = (fahrenheit - 32) * 5/9;
+                document.getElementById("celsius").value = celsius.toFixed(2);
+            }
+            else {
+                alert("Please enter a valid temperature value.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Temperature Converter App</h1>
+    <h3>Celsius to Fahrenheit</h3>
+    <input type="text" id="celsius" placeholder="Enter temperature in Celsius">
+    <button onclick="convertTemperature()">Convert</button>
+    <br>
+    <h3>Fahrenheit to Celsius</h3>
+    <input type="text" id="fahrenheit" placeholder="Enter temperature in Fahrenheit">
+    <button onclick="convertTemperature()">Convert</button>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
